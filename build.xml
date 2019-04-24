@@ -369,8 +369,8 @@
   <!-- Compilation parameters -->
   <property name="optimize" value="on"/>
   <property name="deprecation" value="off"/>
-  <property name="target.java.version" value="1.8"/>
-  <property name="src.java.version" value="1.8"/>
+  <property name="target.java.version" value="12"/>
+  <property name="src.java.version" value="12"/>
   <property name="encoding" value="UTF-8"/>
   <!-- Set test encoding to the same default, but allow override -->
   <property name="test.encoding" value="${encoding}"/>
@@ -1348,8 +1348,8 @@ run JMeter unless all the JMeter jars are added.
 
   <target name="setup-eclipse-project" description="Setup eclipse project to contribute to JMeter">
     <echo>Creating eclipse project</echo>
-    <copy overwrite="false" file="eclipse.project" tofile=".project" />
-    <copy overwrite="false" file="eclipse.classpath" tofile=".classpath"/>
+    <copy overwrite="false" file=".project" tofile=".project" />
+    <copy overwrite="false" file=".classpath" tofile=".classpath"/>
     <input message="Next step will download dependencies for JMeter, do you agree with the download ?" addproperty="do.download" validargs="y,n"/>
     <condition property="do.abort">
       <equals arg1="n" arg2="${do.download}"/>

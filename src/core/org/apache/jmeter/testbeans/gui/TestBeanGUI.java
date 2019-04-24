@@ -16,27 +16,6 @@
  */
 package org.apache.jmeter.testbeans.gui;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.beans.BeanDescriptor;
-import java.beans.BeanInfo;
-import java.beans.Customizer;
-import java.beans.IntrospectionException;
-import java.beans.Introspector;
-import java.beans.PropertyDescriptor;
-import java.beans.PropertyEditorManager;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.ResourceBundle;
-
-import javax.swing.JPopupMenu;
-
 import org.apache.commons.collections.map.LRUMap;
 import org.apache.jmeter.assertions.Assertion;
 import org.apache.jmeter.assertions.gui.AbstractAssertionGui;
@@ -68,6 +47,12 @@ import org.apache.jmeter.visualizers.gui.AbstractVisualizer;
 import org.apache.jorphan.util.JOrphanUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.swing.*;
+import java.awt.*;
+import java.beans.*;
+import java.util.List;
+import java.util.*;
 
 /**
  * JMeter GUI element editing for TestBean elements.

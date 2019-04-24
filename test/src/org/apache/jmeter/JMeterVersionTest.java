@@ -136,13 +136,13 @@ public class JMeterVersionTest extends JMeterTestCase {
     }
 
     /**
-     * Check eclipse.classpath contains the jars declared in build.properties
+     * Check .classpath contains the jars declared in build.properties
      * @throws IOException if something fails
      */
     @Test
     public void testEclipse() throws IOException {
         final BufferedReader eclipse = new BufferedReader(
-                new FileReader(getFileFromHome("eclipse.classpath"))); // assume default charset is OK here
+                new FileReader(getFileFromHome(".classpath"))); // assume default charset is OK here
 //      <classpathentry kind="lib" path="lib/geronimo-jms_1.1_spec-1.1.1.jar"/>
 //      <classpathentry kind="lib" path="lib/activation-1.1.1.jar"/>
 //      <classpathentry kind="lib" path="lib/jtidy-r938.jar"/>
@@ -197,7 +197,7 @@ public class JMeterVersionTest extends JMeterTestCase {
         if (propNames.size() > 0) {
             fail("Should have no names left: "
                     + Arrays.toString(propNames.toArray())
-                    + ". Check eclipse.classpath");
+                    + ". Check .classpath");
         }
     }
 
