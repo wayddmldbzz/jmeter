@@ -1350,8 +1350,8 @@ run JMeter unless all the JMeter jars are added.
 
   <target name="setup-eclipse-project" description="Setup eclipse project to contribute to JMeter">
     <echo>Creating eclipse project</echo>
-    <copy overwrite="false" file="eclipse.project" tofile=".project" />
-    <copy overwrite="false" file="eclipse.classpath" tofile=".classpath"/>
+    <copy overwrite="false" file=".project" tofile=".project" />
+    <copy overwrite="false" file=".classpath" tofile=".classpath"/>
     <input message="Next step will download dependencies for JMeter, do you agree with the download ?" addproperty="do.download" validargs="y,n"/>
     <condition property="do.abort">
       <equals arg1="n" arg2="${do.download}"/>

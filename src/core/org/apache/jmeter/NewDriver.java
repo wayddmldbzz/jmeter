@@ -86,7 +86,7 @@ public final class NewDriver {
                 tmpDir = userDir.getAbsoluteFile().getParent();
             }
         }
-        JMETER_INSTALLATION_DIRECTORY=tmpDir;
+        JMETER_INSTALLATION_DIRECTORY=tmpDir + "\\jmeter";
 
         /*
          * Does the system support UNC paths? If so, may need to fix them up
